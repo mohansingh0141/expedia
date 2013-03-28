@@ -51,4 +51,8 @@ Steps to Compile,Test and Deploy this Spring MVC Application:
 7. Other way of deploment :
 	=> Take the war generated in step 5 from "springcode/target" directory and deploy directly into tomcat webapps
 	   directory and restart tomcat.
+
+8. Access The Application At following URL :
+
+	http://localhost:8080/springcode/home
 		
