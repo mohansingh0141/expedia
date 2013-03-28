@@ -7,7 +7,7 @@ Expedia Challenge
 Steps to Compile,Test and Deploy this Spring MVC Application:
 
 1. Clone This Repo onto your system.
-2. Go to the Directory where pom.xml for this project is located.
+2. Go to the Directory where pom.xml for this project is located (expedia/springcode/pom.xml).
 3. Run "mvn clean" command.
 4. Run "mvn test" command to run junit test cases.
 5. Run "mvn package" command to build the war file.
