@@ -4,9 +4,9 @@ Author : Mohan Singh
 Expedia Challenge
 
 -----------------------
-Steps to Compile,Test and Deploy this Spring MVC Application:
+Steps to Compile,Test and Deploy this Spring MVC Application (Tested on Tomcat7 / ubuntu ):
 
-(After Deployment Application URL will be : "http://localhost:8080/springcode/home"
+(After Deployment Application URL will be : "http://localhost:8080/springcode/home" )
 
 1. Clone This Repo onto your system.
 2. Go to the Directory where pom.xml for this project is located (expedia/springcode/pom.xml).
