@@ -8,7 +8,7 @@ Steps to Compile,Test and Deploy this Spring MVC Application (Tested on Tomcat7 
 
 (After Deployment Application URL will be : "http://localhost:8080/springcode/home" )
 
-1. Clone This Repo onto your system.
+1. Clone This Repo onto your system ( git clone https://github.com/mohansingh0141/expedia.git ).
 2. Go to the Directory where pom.xml for this project is located (expedia/springcode/pom.xml).
 3. Run "mvn clean" command.
 4. Run "mvn test" command to run junit test cases.
