@@ -5,37 +5,40 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.example.springcode.domain.ServerResponse;
-import com.example.springcode.repo.ZipUtilityService;
+import com.example.springcode.domain.WeatherResponse;
+import com.example.springcode.repo.ZipWeatherService;
+import com.example.springcode.validator.ZipCodeValidator;
+
 
 public class ZipUtilityServiceTest {
 	
 	
-	private ZipUtilityService zipUtilityService;
+	private ZipWeatherService zipWeatherService;
+	
 	
 	@Before
 	public void setup(){
 		ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/spring/applicationContext.xml");
-		zipUtilityService = (ZipUtilityService) context.getBean("zipUtilityService");
+		zipWeatherService = (ZipWeatherService) context.getBean("zipWeatherService");
 		
 	}
 	
 	@Test
 	public void validZip(){
 		
-		Assert.assertTrue(zipUtilityService.isValidZip("94117"));
+		Assert.assertTrue(ZipCodeValidator.isValidZip("94117"));
 		
 	}
 	
 	@Test
 	public void invalidZip(){
-		Assert.assertFalse(zipUtilityService.isValidZip("9456788"));
-		Assert.assertFalse(zipUtilityService.isValidZip("945w78s"));
+		Assert.assertFalse(ZipCodeValidator.isValidZip("9456788"));
+		Assert.assertFalse(ZipCodeValidator.isValidZip("945w78s"));
 	}
 	
 	@Test
 	public void weatherInfoIfZipValid(){
-		ServerResponse response = zipUtilityService.getWeather(94117);
+		WeatherResponse response = zipWeatherService.getWeather(94117);
 		Assert.assertEquals("Cole Valley, San Francisco", response.getCity());
 		Assert.assertEquals("California", response.getState());
 	}
@@ -43,7 +46,7 @@ public class ZipUtilityServiceTest {
 	@Test
 	public void weatherInfoIfZipInvalid(){
 	
-		Assert.assertNull(zipUtilityService.getWeather(987654));
+		Assert.assertNull(zipWeatherService.getWeather(987654));
 	}
 
 }

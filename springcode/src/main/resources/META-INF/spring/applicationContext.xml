@@ -13,5 +13,9 @@
 	<context:component-scan base-package="com.example.springcode.domain"/>
 
 	<context:component-scan base-package="com.example.springcode.repo"/>	
+	
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="/META-INF/spring/messages_en" />
+  	</bean>
 
 </beans>

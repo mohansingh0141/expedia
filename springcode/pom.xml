@@ -134,28 +134,21 @@
                 <artifactId>commons-logging</artifactId>
                 <version>${version.commons.logging}</version>
             </dependency>
+            
+                        
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
     
 
-	    <!-- Annotation processor that raising compilation errors whenever 
-	        constraint annotations are incorrectly used. -->
-	    <dependency>
-			<groupId>org.hibernate</groupId>
-      		<artifactId>hibernate-validator-annotation-processor</artifactId>
-      		<version>4.1.0.Final</version>
-      		<scope>provided</scope>
+
+		<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>4.2.0.Final</version>
 		</dependency>
-
-	    <dependency>
-	    	<groupId>org.hibernate</groupId>
-	    	<artifactId>hibernate-entitymanager</artifactId>
-	    	<version>4.1.0.Final</version>
-	    	<scope>provided</scope>
-	    </dependency>
-
+            
         <!-- Import Spring dependencies, these are either from community or versions
             certified in WFK2 -->
         <dependency>
